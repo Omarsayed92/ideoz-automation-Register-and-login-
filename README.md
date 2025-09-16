@@ -216,5 +216,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 For questions or issues:
 - Create GitHub issue
-- Email: support@ideoz.ai
-- Documentation: [Wiki](link-to-wiki)
+- Email: hello@ideoz.ai
+- Documentation: hello@ideoz.ai
