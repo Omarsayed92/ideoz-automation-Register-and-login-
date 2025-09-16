@@ -3,7 +3,7 @@
 ## ✅ Repository Successfully Connected!
 
 Your Playwright test framework has been successfully pushed to:
-**https://github.com/Omarsayed92/ideoz-automation-Resister-and-login-.git**
+**https://github.com/Omarsayed92/ideoz-automation-Register-and-login-.git**
 
 ## 🎯 What's Now Available on GitHub
 
@@ -28,7 +28,7 @@ Your Playwright test framework has been successfully pushed to:
 ### 🚀 Immediate Next Steps
 
 #### 1. **Verify Repository Access**
-Visit: https://github.com/Omarsayed92/ideoz-automation-Resister-and-login-
+Visit: https://github.com/Omarsayed92/ideoz-automation-Register-and-login-
 
 You should see:
 - ✅ All files uploaded (29+ files)
@@ -42,7 +42,7 @@ You should see:
 3. GitHub Actions will automatically start on the next push/PR
 
 #### 3. **Configure GitHub Pages for Test Reports**
-1. Go to repository → **Settings** → **Pages**
+1. Go to: https://github.com/Omarsayed92/ideoz-automation-Register-and-login-/settings/pages
 2. Source: **Deploy from a branch**
 3. Branch: **gh-pages** (will be created automatically)
 4. Folder: **/ (root)**
@@ -82,7 +82,7 @@ git commit -m "Test CI/CD pipeline trigger"
 git push
 ```
 
-Then visit: https://github.com/Omarsayed92/ideoz-automation-Resister-and-login-/actions
+Then visit: https://github.com/Omarsayed92/ideoz-automation-Register-and-login-/actions
 
 ### Local Testing Still Works
 ```bash
@@ -169,7 +169,7 @@ npm run report
 
 Your complete Playwright testing framework with enterprise-grade CI/CD is now live on GitHub!
 
-**Repository URL**: https://github.com/Omarsayed92/ideoz-automation-Resister-and-login-
+**Repository URL**: https://github.com/Omarsayed92/ideoz-automation-Register-and-login-
 
 The framework includes:
 - ✅ **47 comprehensive tests** for login and registration

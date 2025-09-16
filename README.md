@@ -42,8 +42,8 @@ Advanced Playwright Test Framework for Ideoz application with CI/CD integration.
 
 1. **Clone the repository:**
    ```bash
-   git clone <repository-url>
-   cd ideoz-auto
+   git clone https://github.com/Omarsayed92/ideoz-automation-Register-and-login-.git
+   cd ideoz-automation-Register-and-login-
    ```
 
 2. **Install dependencies:**
