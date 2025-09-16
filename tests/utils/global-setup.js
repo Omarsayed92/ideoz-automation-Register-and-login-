@@ -10,7 +10,8 @@ async function globalSetup(config) {
   try {
     // Warm up the application
     console.log('🌡️ Warming up application...');
-    await page.goto(config.use.baseURL || 'https://app-test.ideoz.ai/');
+    const baseURL = config.use?.baseURL || 'https://app-test.ideoz.ai/';
+    await page.goto(baseURL);
     await page.waitForLoadState('networkidle');
 
     // Check if application is accessible
@@ -36,11 +37,11 @@ async function globalSetup(config) {
 
     // Log environment information
     console.log('🌍 Environment Information:');
-    console.log(`  - Base URL: ${config.use.baseURL}`);
+    console.log(`  - Base URL: ${baseURL}`);
     console.log(`  - CI: ${process.env.CI || 'false'}`);
     console.log(`  - Node version: ${process.version}`);
-    console.log(`  - Workers: ${config.workers}`);
-    console.log(`  - Retries: ${config.retries}`);
+    console.log(`  - Workers: ${config.workers || 'undefined'}`);
+    console.log(`  - Retries: ${config.retries || 0}`);
 
     console.log('✅ Global setup completed successfully');
 
