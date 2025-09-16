@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  playwright-tests:
+    build: .
+    container_name: ideoz-playwright-tests
+    volumes:
+      - ./test-results:/app/test-results
+      - ./playwright-report:/app/playwright-report
+      - ./tests:/app/tests
+    environment:
+      - CI=true
+      - PLAYWRIGHT_BROWSERS_PATH=/ms-playwright
+    command: npm test
+
+  playwright-ui:
+    build: .
+    container_name: ideoz-playwright-ui
+    ports:
+      - "9323:9323"
+    volumes:
+      - ./test-results:/app/test-results
+      - ./playwright-report:/app/playwright-report
+      - ./tests:/app/tests
+    environment:
+      - CI=false
+    command: npx playwright test --ui --host=0.0.0.0
+
+  playwright-headed:
+    build: .
+    container_name: ideoz-playwright-headed
+    volumes:
+      - ./test-results:/app/test-results
+      - ./playwright-report:/app/playwright-report
+      - ./tests:/app/tests
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    environment:
+      - DISPLAY=:0
+      - CI=false
+    command: npx playwright test --headed

@@ -1,0 +1,38 @@
+{
+  "name": "playwright-test-framework",
+  "version": "1.0.0",
+  "description": "Advanced Playwright Test Framework with CI/CD Integration",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "report": "playwright show-report",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:regression": "playwright test --grep @regression",
+    "test:ci": "playwright test --reporter=github",
+    "test:chromium": "playwright test --project=chromium",
+    "test:firefox": "playwright test --project=firefox",
+    "test:webkit": "playwright test --project=webkit",
+    "test:mobile": "playwright test --project=mobile-chrome --project=mobile-safari",
+    "test:edge": "playwright test --project=edge",
+    "test:parallel": "playwright test --workers=4",
+    "test:serial": "playwright test --workers=1",
+    "docker:build": "docker build -t ideoz-playwright-tests .",
+    "docker:test": "docker run --rm -v $(pwd)/test-results:/app/test-results ideoz-playwright-tests",
+    "docker:up": "docker-compose up",
+    "docker:down": "docker-compose down",
+    "lint": "eslint tests/",
+    "format": "prettier --write tests/",
+    "clean": "rm -rf test-results playwright-report",
+    "pretest": "npm run clean",
+    "posttest": "npm run report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.39.0",
+    "@types/node": "^20.8.0",
+    "dotenv": "^16.3.1",
+    "typescript": "^5.2.2",
+    "winston": "^3.10.0"
+  }
+}
